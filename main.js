@@ -1,6 +1,19 @@
-const numberOfUsers = document.getElementById("numberOfUsersTextBox")
+const numberOfUsersTextBox = document.getElementById("numberOfUsersTextBox")
+const checkboxes = document.querySelectorAll(".checkbox")
+for(const box of checkboxes){
+    box.setAttribute("aria-checked", "true")
+}
 
-function retrieveData(numberOfUsers){
+const male = document.getElementById("male")
+const female = document.getElementById("female")
+const firstname = document.getElementById("firstname")
+const lastname = document.getElementById("lastname")
+
+const submitButton = document.getElementById("submit")
+submitButton.addEventListener("click", retrieveData)
+
+function retrieveData(){
+    const numberOfUsers = numberOfUsersTextBox.value
     const baseUrl = "https://randomuser.me/api/?results="
     const url = encodeURI(baseUrl + numberOfUsers)
     fetch(url)
@@ -15,4 +28,3 @@ function retrieveData(numberOfUsers){
             }
         })
 }
-retrieveData(12)

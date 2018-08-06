@@ -11,19 +11,19 @@
     <h1>Random User Generator</h1>
     <div class="numberOfUsers_container">
     <p1>How many users?</p1>
-    <form>
+    <div>
         <input type="text" name="numberOfUsers" placeholder="50" id="numberOfUsersTextBox">
-        <input type="submit" value="Submit">
+        <input type="submit" id="submit" value="Submit">
         <input type="reset">
-    </form>
+    </div>
     </div>
     <p1>Click the checkboxes to filter through the results:</p1>
-    <form class="result_filter">
-            <input type="checkbox" name="gender" value="male" id="male"> Male
-            <input type="checkbox" name="name" value="firstname" id="firstname"> First Name<br>
-            <input type="checkbox" name="gender" value="female" id="female"> Female
-            <input type="checkbox" name="name" value="lastname" id="lastname"> Last Name<br>
-    </form>
+    <div class="result_filter">
+            <input type="checkbox" name="gender" value="male" class="checkbox" id="male"> Male
+            <input type="checkbox" name="name" value="firstname" class="checkbox" id="firstname"> First Name<br>
+            <input type="checkbox" name="gender" value="female" class="checkbox" id="female"> Female
+            <input type="checkbox" name="name" value="lastname" class="checkbox" id="lastname"> Last Name<br>
+    </div>
     <main></main>
 </body>
 </html>
